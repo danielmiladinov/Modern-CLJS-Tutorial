@@ -12,18 +12,18 @@
   ;; lein-cljsbuild plugin to build a CLJS project
   :plugins [[lein-cljsbuild "0.3.3"]]
 
-  ;; cljsbuild options configuration
+  ;; cljsbuild tasks configuration
   :cljsbuild {:builds
               [{;; CLJS source code path
                 :source-paths ["src/cljs"]
 
                 ;; Google Closure (CLS) options configuration
-                :compiler {;; CLS generated JS script filename
+                :compiler {;; CLJS generated JS script filename
                            :output-to "resources/public/js/modern.js"
 
-                           ;; minimal JS optimization directive
+                           ;; use minimal optimization CLJS directive
                            :optimizations :whitespace
 
-                           ;; generated JS code prettyfication
+                           ;; generated JS code pretty-ification
                            :pretty-print true}}]})
 
