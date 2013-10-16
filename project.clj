@@ -10,7 +10,12 @@
                  [org.clojure/clojurescript "0.0-1913"]]
 
   ;; lein-cljsbuild plugin to build a CLJS project
-  :plugins [[lein-cljsbuild "0.3.3"]]
+  :plugins [
+            [lein-cljsbuild "0.3.4"]
+            [lein-ring "0.8.7"]]
+
+  ;; ring tasks configuration
+  :ring {:handler modern-cljs.core/handler}
 
   ;; cljsbuild tasks configuration
   :cljsbuild {:builds
